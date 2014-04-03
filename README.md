@@ -1,7 +1,7 @@
 PhoneGap-Newsstand-iOS
 ======================
 
-THIS IS WORK IN PROGRESS. It's can only used to change the cover icon for now.
+THIS IS WORK IN PROGRESS. Can only be used to change the cover icon of a Newsstand app.
 
 Installation
 ------------
