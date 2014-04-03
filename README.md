@@ -1,4 +1,4 @@
 PhoneGap-Newsstand-iOS
 ======================
 
-Newsstand Integration for PhoneGap / Cordova iOS Apps
+THIS IS WORK IN PROGRESS. DO NOT USE THIS PLUGIN FOR NOW!
