@@ -63,10 +63,10 @@ Newsstand.prototype.setIcon = function (options) {
         protectCall(options.error, 'setIcon::error');
     };
 
-    return exec('setIcon', {
+    return exec('setIcon', [{
         url: options.url || null,
         badge: +(options.badge || 0)
-    }, ok, error);
+    }], ok, error);
 };
 
 module.exports = new Newsstand();
