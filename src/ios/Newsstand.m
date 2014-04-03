@@ -13,7 +13,7 @@
 {
     NSMutableDictionary* options = [command.arguments objectAtIndex:0];
     NSString *url = [options objectForKey:@"url"];
-    NSInteger *badge = [options objectForKey:@"badge"];
+    int badge = [[options objectForKey:@"badge"] intValue];
 
     NSURL *imageURL = [NSURL URLWithString:url];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -24,9 +24,7 @@
                 UIImage *img = [UIImage imageWithData:imageData];
                 if (img) {
                     [[UIApplication sharedApplication] setNewsstandIconImage:img];
-                    if (badge) {
-                        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[badge intValue]];
-                    }
+                    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badge intValue];
 
                     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
                     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
