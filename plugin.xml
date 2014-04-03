@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cc.fovea.plugins.newsstand"
+    version="0.0.1">
+
+    <name>Newsstand</name>
+	<description>Newsstand integration for iOS</description>
+    <engines>
+        <engine name="cordova" version=">=2.4.0" />
+    </engines>
+	
+	<license>MIT</license>
+    <keywords>cordova,phonegap,newsstand,news,stand,kit,newsstandkit,ios</keywords>
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="Newsstand.js" name="Newsstand">
+            <clobbers target="newsstand" />
+        </js-module>
+        
+        <!-- Cordova 2.2 -->
+        <plugins-plist key="Newsstand" string="Newsstand" />
+                    
+        <!-- Cordova 2.5+ -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="Newsstand">
+                <param name="ios-package" value="Newsstand"/>
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/Newsstand.h" />
+        <source-file src="src/ios/Newsstand.m" />
+
+        <framework src="NewsstandKit.framework" />
+    </platform>
+</plugin>
