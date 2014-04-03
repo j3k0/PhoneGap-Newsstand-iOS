@@ -11,7 +11,7 @@
 
 - (void)setIcon: (CDVInvokedUrlCommand*)command
 {
-    NSMutableDictionary* options = [command.arguments objectAtIndex:0];
+    NSDictionary *options = command.arguments;
     NSString *url = [options objectForKey:@"url"];
     int badge = [[options objectForKey:@"badge"] intValue];
 
