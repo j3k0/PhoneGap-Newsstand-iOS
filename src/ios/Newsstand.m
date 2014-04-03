@@ -12,8 +12,8 @@
 - (void)setIcon: (CDVInvokedUrlCommand*)command
 {
     NSMutableDictionary* options = [command.arguments objectAtIndex:0];
-    NSString url = [options objectForKey:@"url"];
-    NSInteger badge = [options objectForKey:@"badge"];
+    NSString *url = [options objectForKey:@"url"];
+    NSInteger *badge = [options objectForKey:@"badge"];
 
     NSURL *imageURL = [NSURL URLWithString:url];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
@@ -24,7 +24,9 @@
                 UIImage *img = [UIImage imageWithData:imageData];
                 if (img) {
                     [[UIApplication sharedApplication] setNewsstandIconImage:img];
-                    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:1];
+                    if (badge) {
+                        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[badge intValue]];
+                    }
 
                     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
                     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
