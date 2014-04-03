@@ -28,7 +28,7 @@ var protectCall = function (callback, context) {
 
 Newsstand.prototype.init = function (options) {
     if (options.debug) {
-        exec('debug', [], noop, noop);
+        // exec('debug', [], noop, noop);
         log = function (msg) {
             console.log("Newsstand[js]: " + msg);
         };
