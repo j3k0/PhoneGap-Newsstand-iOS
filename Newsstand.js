@@ -46,10 +46,6 @@ Newsstand.prototype.init = function (options) {
 };
 
 /**
- * Makes an in-app purchase. 
- * 
- * @param {String} productId The product identifier. e.g. "com.example.MyApp.myproduct"
- * @param {int} quantity 
  */
 Newsstand.prototype.setIcon = function (options) {
 
@@ -70,7 +66,7 @@ Newsstand.prototype.setIcon = function (options) {
     return exec('setIcon', {
         url: options.url || null,
         badge: +(options.badge || 0)
-    }, purchaseOk, purchaseFailed);
+    }, ok, error);
 };
 
 module.exports = new Newsstand();
