@@ -24,7 +24,7 @@
                 UIImage *img = [UIImage imageWithData:imageData];
                 if (img) {
                     [[UIApplication sharedApplication] setNewsstandIconImage:img];
-                    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badge intValue];
+                    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:badge];
 
                     CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"OK"];
                     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
