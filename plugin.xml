@@ -33,5 +33,16 @@
         <source-file src="src/ios/Newsstand.m" />
 
         <framework src="NewsstandKit.framework" />
+
+        <!-- Info.plist -->
+        <config-file target="*-Info.plist" parent="UINewsstandApp">
+            <true/>
+        </config-file>
+
+        <config-file target="*-Info.plist" parent="UIBackgroundModes">
+            <array>
+                <string>newsstand-content</string>
+            </array>
+        </config-file>
     </platform>
 </plugin>
