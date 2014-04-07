@@ -45,18 +45,23 @@
             </array>
         </config-file>
 
-        <config-file target="*-Info.plist" parent="CFBundleIcons/CFBundlePrimaryIcon/UINewsstandIcon">
-            <key>UINewsstandIcon</key>
-            <dict>
-                <key>CFBundleIconFiles</key>
-                <array>
-                    <string>icon-newsstand</string>
-                </array>
-                <key>UINewsstandBindingEdge</key>
-                <string>UINewsstandBindingEdgeLeft</string>
-                <key>UINewsstandBindingType</key>
-                <string>UINewsstandBindingTypeMagazine</string>
-            </dict>
+        <config-file target="*-Info.plist" parent="CFBundleIcons">
+            <array>
+                <key>CFBundlePrimaryIcon</key>
+                <dict>
+                    <key>UINewsstandIcon</key>
+                    <dict>
+                        <key>CFBundleIconFiles</key>
+                        <array>
+                            <string>icon-newsstand</string>
+                        </array>
+                        <key>UINewsstandBindingEdge</key>
+                        <string>UINewsstandBindingEdgeLeft</string>
+                        <key>UINewsstandBindingType</key>
+                        <string>UINewsstandBindingTypeMagazine</string>
+                    </dict>
+                </dict>
+            </array>
         </config-file>
     </platform>
 </plugin>
