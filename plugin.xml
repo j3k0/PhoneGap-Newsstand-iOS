@@ -46,7 +46,7 @@
         </config-file>
 
         <config-file target="*-Info.plist" parent="CFBundleIcons">
-            <array>
+            <dict>
                 <key>CFBundlePrimaryIcon</key>
                 <dict>
                     <key>UINewsstandIcon</key>
@@ -61,7 +61,7 @@
                         <string>UINewsstandBindingTypeMagazine</string>
                     </dict>
                 </dict>
-            </array>
+            </dict>
         </config-file>
     </platform>
 </plugin>
