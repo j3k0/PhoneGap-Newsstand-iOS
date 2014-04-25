@@ -1,7 +1,7 @@
 PhoneGap-Newsstand-iOS
 ======================
 
-THIS IS WORK IN PROGRESS. Can only be used to change the cover icon of a Newsstand app.
+This plugin can be used to configure a PhoneGap application as a Newstand application, then change the cover icon to reflect the latest issue.
 
 Installation
 ------------
@@ -16,6 +16,8 @@ or:
 
 Documentation
 -------------
+
+Tutorial here: http://fovea.cc/blog/index.php/tutorial-for-phonegap-newsstand-applications/
 
 This is code as documentation... I'll do better later.
 
